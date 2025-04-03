@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>나의 미니홈페이지</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.6;
+      padding-top: 70px;
+      background: #f5f5f5;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #2b2b2b;
+      color: white;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px 0;
+      list-style: none;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.2s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+      transition: all 0.2s;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .profile, .notice {
+      border: 1px solid #ccc;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .profile {
+      width: 45%;
+      text-align: center;
+    }
+
+    .profile img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .notice {
+      width: 55%;
+      background: #f0f8ff;
+    }
+
+    .notice h3 {
+      color: #0044cc;
+      margin-bottom: 10px;
+    }
+
+    .notice table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .notice th, .notice td {
+      border-bottom: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 20px auto;
+      border: 1px solid #ddd;
+      background: #fffde7;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .content .highlight {
+      color: red;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #2b2b2b;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    h2.sr-only {
+      position: absolute;
+      left: -9999px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT ME</a></li>
+        <li><a href="#">NOTICE</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="profile">
+      <h2 class="sr-only">자기소개</h2>
+      <h1>안승우의 미니홈피</h1>
+      <img src="profile.png" alt="프로필 이미지">
+      <p><strong style="color: orangered">안</strong>녕하세요! 저는 웹 디자이너가 되고 싶은 고등학생입니다. 새로운 기술을 배우는 것을 좋아하고 도전하는 것을 즐깁니다.</p>
+      <hr style="margin: 15px 0">
+      <ul style="text-align: left; padding-left: 20px;">
+        <li>📧 이메일: anseungu56@gmail.com</li>
+        <li>📍 위치: 경기도 광주시</li>
+        <li>💡 관심 분야: 웹, 해킹, 알고리즘</li>
+      </ul>
+    </section>
+
+    <section class="notice">
+      <h2 class="sr-only">공지사항</h2>
+      <h3>📌 공지사항</h3>
+      <table>
+        <thead>
+          <tr><th>제목</th><th>날짜</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>김성민 언랭임 ㅇㅇ</td><td>1950-05-23</td></tr>
+          <tr><td>마영진 언랭임 ㅇㅇ</td><td>2009-05-23</td></tr>
+          <tr><td>안승우 루비 1임 ㅇㅇ</td><td>2025-05-2</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <section class="content">
+    <p>
+      저는 이번 프로젝트에서 웹 표준과 웹 접근성을 고려한 디자인을 목표로 삼고 있어요. 특히 <span class="highlight">모든 사람이 쉽게 사용할 수 있는 웹사이트</span>를 만드는 것이 중요하다고 생각합니다. 이를 위해 팀원들과 함께 HTML, CSS 구조를 고민하며 작업 중입니다.
+    </p>
+  </section>
+
+  <footer>
+    <address>
+      © 2025 홍길동. All rights reserved.
+    </address>
+  </footer>
+</body>
+</html>
